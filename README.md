@@ -1,12 +1,12 @@
 # OpenClaw Handbook | OpenClaw 安装使用教程
 
-<div align="center">
+<div align=\"center\">
 
 ## 🤖 OpenClaw 安装使用疑难杂症解决指南
 
 **OpenClaw 各平台安装教程 · 问题解答 · 衍生网站合集**
 
-*最后更新 (Last Updated): 2026-03-10 02:18:04*
+*最后更新 (Last Updated): 2026-03-10 02:30:27*
 
 [![GitHub stars](https://img.shields.io/github/stars/yy1142274323/openclaw-handbook?style=social)](https://github.com/yy1142274323/openclaw-handbook/stargazers)
 
@@ -30,7 +30,6 @@
 OpenClaw 是一个强大的开源 AI 助手框架。
 
 **官方网站**: https://openclaw.ai
-**GitHub**: https://github.com/openclaw/openclaw
 
 ---
 
@@ -38,29 +37,18 @@ OpenClaw 是一个强大的开源 AI 助手框架。
 
 ### Linux / Ubuntu / Debian
 
-```bash
-# 安装 Node.js
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# 安装 OpenClaw
 npm install -g openclaw
 openclaw start
-```
 
 ### macOS
 
-```bash
 brew install nodejs
 npm install -g openclaw
 openclaw start
-```
 
 ### Docker
 
-```bash
 docker run -d -p 18789:18789 openclaw/openclaw
-```
 
 ---
 
@@ -80,37 +68,26 @@ A: 支持 OpenAI、Claude、DeepSeek、Kimi、Moonshot 等。
 ## 🔧 疑难杂症解决
 
 ### npm 安装失败
-```bash
-node -v  # 检查版本
+node -v
 npm cache clean --force
 sudo npm install -g openclaw
-```
 
 ### 端口被占用
-```bash
 lsof -i :18789
 kill -9 <PID>
-```
 
 ### 无法连接 API
-```bash
 export HTTP_PROXY=http://127.0.0.1:7890
-export HTTPS_PROXY=http://127.0.0.1:7890
-```
 
 ---
 
 ## 🛠️ 环境配置
 
 ### Node.js
-```bash
 curl -fsSL https://nodejs.org/dist/v20.x/node-v20.x-linux-x64.tar.xz | sudo tar -xJ -C /usr/local --strip-components=1
-```
 
 ### Python (可选)
-```bash
 sudo apt install python3.10 python3-pip
-```
 
 ---
 
@@ -118,9 +95,9 @@ sudo apt install python3.10 python3-pip
 
 | 项目 | ⭐ Stars | 描述 |
 |------|---------|------|
-| zeroclaw-labs/zeroclaw | 25,147 | 轻量级 AI 助手 |
-| dzhng/deep-research | 18,539 | AI 研究助手 |
-| agent0ai/agent-zero | 15,916 | Agent Zero 框架 |
+| zeroclaw-labs/zeroclaw | 25,000+ | 轻量级 AI 助手 |
+| dzhng/deep-research | 18,000+ | AI 研究助手 |
+| agent0ai/agent-zero | 15,000+ | Agent Zero 框架 |
 
 ---
 
@@ -128,9 +105,8 @@ sudo apt install python3.10 python3-pip
 
 欢迎请我喝杯咖啡 ☕
 
-![支付宝赞助](https://raw.githubusercontent.com/yy1142274323/openclaw-handbook/main/alipay_qr.png)
+<img src=\"https://raw.githubusercontent.com/yy1142274323/openclaw-handbook/main/alipay_qr.png\" width=\"200\">
 
 ---
 
 *🤖 由 Jarvis 自动更新*
-
