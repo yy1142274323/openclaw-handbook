@@ -1,0 +1,22 @@
+name: Handbook Update
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # 每天 UTC 4点
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check for updates
+        run: |
+          echo "# OpenClaw Handbook Update" > update_log.md
+          echo "- Last check: $(date)" >> update_log.md
+      
+      - name: Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "文档更新"
